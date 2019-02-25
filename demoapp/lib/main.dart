@@ -11,9 +11,14 @@ class MyApp extends StatelessWidget {
   @override // overides method built into the widget
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme:ThemeData(
+        brightness: Brightness.light,
+        primarySwatch: Colors.red,
+        accentColor: Colors.orangeAccent
+      ),
       home: Scaffold(
           appBar: AppBar(title: Text('EasyList')), 
-          body: ProductManager('Food Tester'),
+          body: ProductManager(),
         ),
     );
   }

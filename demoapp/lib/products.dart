@@ -6,15 +6,14 @@ class Products extends StatelessWidget {
   Products(this.products);
 
   @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
+  Widget build(BuildContext context) { 
     return Column(
       children: products
           .map(
             (element) => Card(
                   child: Column(children: <Widget>[
                     Text(element),
-                    Image.asset('assets/apple.png'),
+                    //Image.asset('assets/apple.png'),
                   ]),
                 ),
           )
