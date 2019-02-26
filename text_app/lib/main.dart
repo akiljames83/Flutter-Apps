@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './text_control.dart';
+
 main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -10,7 +12,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _mainText = 'The first flutter assignment.';
 
   @override
   Widget build(BuildContext context) {
@@ -22,21 +23,7 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title:Text('Text App'),
         ),
-        body: Column(
-          children: [
-            Container(
-            margin: EdgeInsets.all(10.0),
-            child: RaisedButton(
-              onPressed: () {
-                setState(() {
-                 _mainText = 'Got changed!'; 
-                });
-              },
-              child:Text('Change Text!')
-            )),
-            Text(_mainText)
-            ]
-        ),
+        body: TextControl(),
       )
     );
   }
